@@ -48,4 +48,16 @@ print(values_greater_than_second([]))
 
 
 
+#########################################
+# Example: length_and_value(4,7) should return [7,7,7,7]
+def length_and_value(num1,num2):
+    new_li=[]
+    for i in range(0,num1+1):
+        new_li.append(num2)
+        
+    return new_li
+    
+
+print(length_and_value(4,7))
+
 
