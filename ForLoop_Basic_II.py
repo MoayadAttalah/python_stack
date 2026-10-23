@@ -1,15 +1,17 @@
 #- Given a list, write a function that changes all positive numbers in the list to "big".
     
-mynumbers=[0,1,-5,-6,5,6]
-myChangedNumbers=[]
-for i in mynumbers:
-    if i>=0:
-        myChangedNumbers.append("big")
-    else:
-        myChangedNumbers.append(i)    
-               
-print(myChangedNumbers)        
 
+
+def repace_positive(mynumbers):
+    myChangedNumbers=[]    
+    for i in mynumbers:
+        if i>=0:
+            myChangedNumbers.append("big")
+        else:
+            myChangedNumbers.append(i)    
+               
+    return(myChangedNumbers)        
+print(repace_positive([0,1,-5,-6,5,6]))
 
 
 # - Given a list of numbers, create a function to replace the last value with the number of positive values.
@@ -21,8 +23,9 @@ def count_positive(li):
     for i in li:
         if i>0:
             count+=1
-    li.pop()
-    li.append(count)
+    li[-1]= count       
+    # li.pop()
+    # li.append(count)
     return li
 
 
@@ -122,3 +125,6 @@ def reverse_list(li):
     return li[temp1:]    # print(li[i])
 a=reverse_list([37,2,1,-9])
 print(a)
+
+    
+    
