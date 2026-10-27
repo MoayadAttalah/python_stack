@@ -1,13 +1,11 @@
 import random
-def randInt(min="unknown",max="unknown"):
-    if min=="unknown" and max=="unknown":
-        return int(random.random()*100)
-    elif min=="unknown" and max!="unknown": 
-        return int(random.random()*max)
-    elif min!="unknown" and max=="unknown": 
-            return int(random.random()*100+min)
+def randInt(min=0,max=100):
+    if (min>=0 and max>0):
+        return int(random.random()*(max-min)+min)
     else:
-            return int(random.random()*max+min)
+        return int(random.random()*((-1*max)-(-1*min)+(-min)))
+        
+    
         
         
     
@@ -15,7 +13,5 @@ print(randInt())
 print(randInt(min=10)) 
 print(randInt(max=50)) 
 print(randInt(min=10,max=200))    
-    
-###################################################
 
-    
+
