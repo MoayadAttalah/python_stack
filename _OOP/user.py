@@ -1,6 +1,9 @@
 class User:
-    def __init__(self,user_balance):
+    def __init__(self,user_balance,id=0000,name="",email=""):
         self.user_balance=user_balance
+        self.name=name
+        self.id=id
+        self.email=email
         
     def make_adeposit(self,amount):
         self.user_balance+=amount
@@ -10,14 +13,14 @@ class User:
         self.user_balance-=amount
         
     def display_user_balance(self):
-        print(self.user_balance)  
+        print(f"{self.user_balance}")  
     
     def transfer_money(self,other_user,amount):
         self.user_balance-=amount
         other_user.user_balance+=amount          
         
 
-moayad=User(20000)
+moayad=User(20000,451312,"Moayad","moayadattalah@gmail.com")
 ahmad=User(10000)
 sara=User(50000)
 moayad.make_adeposit(1000)
