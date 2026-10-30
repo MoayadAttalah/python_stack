@@ -51,7 +51,7 @@ def iterateDictionary(students):
             lname.append(value)
             
     for i in range(0,len(fname)):
-        print(f"{fname[i]}-{lname[i]}")
+        print(f"{fname[i].upper()}-{lname[i].upper()}")
 
 
     
