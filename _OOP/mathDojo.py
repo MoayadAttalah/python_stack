@@ -11,7 +11,7 @@ class MathDojo:
     def subtract(self, num, *nums):
         x=num
         for values in nums:
-            x=x+values
+            x=x-values
         self.result=x
         return self
 
